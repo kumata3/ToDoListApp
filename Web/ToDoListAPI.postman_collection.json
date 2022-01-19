@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "1dc0d171-921b-4106-bba7-5e381e709749",
+		"name": "ToDoListAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/login?login_account=abc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "login_account",
+							"value": "abc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToDoList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/todolist/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"todolist",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToDoItem Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\" : \"追加アイテム2\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8888/todolist/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"todolist",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToDoItem UPdate",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"更新アイテム\",\n    \"status\": false\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8888/todolist/1/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"todolist",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToDoItem Delete",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"更新アイテム\",\n    \"status\": false\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8888/todolist/1/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"todolist",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
